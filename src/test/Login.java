@@ -23,12 +23,14 @@ public class Login {
 	
 	@Test
 	public void searchTest() {
+		PropertyConfig pc = new PropertyConfig();
+		pc.readFile();
 		
 		System.out.println("Page title is: " + driver.getTitle());
 		Assert.assertEquals("Welcome to Facebook - Log In, Sign Up or Learn More", driver.getTitle());
 
-		driver.findElement(By.cssSelector("#email")).sendKeys("qatrain14@gmail.com");
-		driver.findElement(By.cssSelector("#pass")).sendKeys("qatrain14");
+		driver.findElement(By.cssSelector("#email")).sendKeys(pc.getUsername());
+		driver.findElement(By.cssSelector("#pass")).sendKeys(pc.getPassword());
 		driver.findElement(By.id("loginbutton")).submit();
 		
 		try{
@@ -42,7 +44,7 @@ public class Login {
 		Assert.assertEquals("Tester Tester",driver.findElement(By.className("fbxWelcomeBoxName")).getText());
 		
 		driver.findElement(By.className("menuPulldown")).click();
-	//	Alert alert = driver.switchTo().alert();
+	
 		driver.findElement(By.cssSelector(".uiLinkButtonInput")).submit();
 		
 		System.out.println("Page title is: " + driver.getTitle());

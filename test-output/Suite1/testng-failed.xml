@@ -3,11 +3,15 @@
 <suite name="Failed suite [Suite1]">
   <test name="test1(failed)">
     <classes>
+      <class name="test.Logout">
+        <methods>
+          <include name="afterClass"/>
+          <include name="logoutTest"/>
+        </methods>
+      </class> <!-- test.Logout -->
       <class name="test.Login">
         <methods>
-          <include name="searchTest"/>
           <include name="beforeTest"/>
-          <include name="afterClass"/>
         </methods>
       </class> <!-- test.Login -->
     </classes>

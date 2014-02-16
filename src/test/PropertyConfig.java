@@ -8,6 +8,9 @@ public class PropertyConfig {
 		private FileInputStream file = null;
 		private Properties p; 
 		
+		public PropertyConfig() {
+			readFile();
+		}
 		public String getUsername(){
 			return username;
 		}

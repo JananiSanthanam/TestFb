@@ -7,7 +7,6 @@ import org.testng.Assert;
 
 public class BaseFB {
 	public final static WebDriver driver = new FirefoxDriver();
-
 	
 	public void Login() {
 		PropertyConfig pc = new PropertyConfig();

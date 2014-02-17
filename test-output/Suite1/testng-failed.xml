@@ -6,14 +6,18 @@
       <class name="test.Logout">
         <methods>
           <include name="afterClass"/>
-          <include name="logoutTest"/>
         </methods>
       </class> <!-- test.Logout -->
       <class name="test.Login">
         <methods>
-          <include name="beforeTest"/>
+          <include name="BeforeTest"/>
         </methods>
       </class> <!-- test.Login -->
+      <class name="test.Home">
+        <methods>
+          <include name="statusEmpty"/>
+        </methods>
+      </class> <!-- test.Home -->
     </classes>
   </test> <!-- test1(failed) -->
 </suite> <!-- Failed suite [Suite1] -->

@@ -3,12 +3,12 @@
 <suite name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="test.Logout">
+      <class name="test.Home">
         <methods>
-          <include name="afterClass"/>
-          <include name="logoutTest"/>
+          <include name="HomeTest"/>
+          <include name="statusEmpty"/>
         </methods>
-      </class> <!-- test.Logout -->
+      </class> <!-- test.Home -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

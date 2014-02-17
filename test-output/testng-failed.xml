@@ -1,14 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Default suite]">
-  <test name="Default test(failed)">
+<suite name="Failed suite [Suite1]">
+  <test name="test1(failed)">
     <classes>
       <class name="test.Logout">
         <methods>
           <include name="afterClass"/>
-          <include name="logoutTest"/>
         </methods>
       </class> <!-- test.Logout -->
+      <class name="test.Login">
+        <methods>
+          <include name="BeforeTest"/>
+        </methods>
+      </class> <!-- test.Login -->
+      <class name="test.Home">
+        <methods>
+          <include name="statusEmpty"/>
+        </methods>
+      </class> <!-- test.Home -->
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- test1(failed) -->
+</suite> <!-- Failed suite [Suite1] -->

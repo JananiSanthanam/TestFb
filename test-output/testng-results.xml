@@ -1,31 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="3" passed="3">
+<testng-results skipped="0" failed="0" total="5" passed="5">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite1" duration-ms="20481" started-at="2014-02-16T20:38:10Z" finished-at="2014-02-16T20:38:30Z">
+  <suite name="Suite1" duration-ms="29937" started-at="2014-02-17T21:27:32Z" finished-at="2014-02-17T21:28:02Z">
     <groups>
     </groups>
-    <test name="test1" duration-ms="20481" started-at="2014-02-16T20:38:10Z" finished-at="2014-02-16T20:38:30Z">
+    <test name="test1" duration-ms="29937" started-at="2014-02-17T21:27:32Z" finished-at="2014-02-17T21:28:02Z">
+      <class name="test.Home">
+        <test-method status="PASS" signature="HomeTest()[pri:0, instance:test.Home@55de5f0b]" name="HomeTest" duration-ms="6999" started-at="2014-02-17T13:27:48Z" finished-at="2014-02-17T13:27:55Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- HomeTest -->
+        <test-method status="PASS" signature="statusEmpty()[pri:0, instance:test.Home@55de5f0b]" name="statusEmpty" duration-ms="4977" started-at="2014-02-17T13:27:55Z" finished-at="2014-02-17T13:28:00Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- statusEmpty -->
+      </class> <!-- test.Home -->
       <class name="test.Logout">
-        <test-method status="PASS" signature="logoutTest()[pri:0, instance:test.Logout@735c3f7b]" name="logoutTest" duration-ms="7598" started-at="2014-02-16T12:38:23Z" finished-at="2014-02-16T12:38:30Z">
+        <test-method status="PASS" signature="logoutTest()[pri:0, instance:test.Logout@4d8feec4]" name="logoutTest" duration-ms="1806" started-at="2014-02-17T13:28:00Z" finished-at="2014-02-17T13:28:02Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logoutTest -->
-        <test-method status="PASS" signature="afterClass()[pri:0, instance:test.Logout@735c3f7b]" name="afterClass" is-config="true" duration-ms="86" started-at="2014-02-16T12:38:30Z" finished-at="2014-02-16T12:38:30Z">
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:test.Logout@4d8feec4]" name="afterClass" is-config="true" duration-ms="125" started-at="2014-02-17T13:28:02Z" finished-at="2014-02-17T13:28:02Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
       </class> <!-- test.Logout -->
       <class name="test.Login">
-        <test-method status="PASS" signature="beforeTest()[pri:0, instance:test.Login@36263003]" name="beforeTest" is-config="true" duration-ms="10106" started-at="2014-02-16T12:38:10Z" finished-at="2014-02-16T12:38:20Z">
+        <test-method status="PASS" signature="BeforeTest()[pri:0, instance:test.Login@282c1e2e]" name="BeforeTest" is-config="true" duration-ms="13188" started-at="2014-02-17T13:27:32Z" finished-at="2014-02-17T13:27:45Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- beforeTest -->
-        <test-method status="PASS" signature="EmptyLoginTest()[pri:0, instance:test.Login@36263003]" name="EmptyLoginTest" duration-ms="1353" started-at="2014-02-16T12:38:20Z" finished-at="2014-02-16T12:38:21Z">
+        </test-method> <!-- BeforeTest -->
+        <test-method status="PASS" signature="EmptyLoginTest()[pri:0, instance:test.Login@282c1e2e]" name="EmptyLoginTest" duration-ms="1498" started-at="2014-02-17T13:27:45Z" finished-at="2014-02-17T13:27:46Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- EmptyLoginTest -->
-        <test-method status="PASS" signature="InvalidLoginTest()[pri:0, instance:test.Login@36263003]" name="InvalidLoginTest" duration-ms="1320" started-at="2014-02-16T12:38:21Z" finished-at="2014-02-16T12:38:23Z">
+        <test-method status="PASS" signature="InvalidLoginTest()[pri:0, instance:test.Login@282c1e2e]" name="InvalidLoginTest" duration-ms="1327" started-at="2014-02-17T13:27:46Z" finished-at="2014-02-17T13:27:48Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- InvalidLoginTest -->

@@ -16,8 +16,6 @@ public class Logout {
 	@Test
 	public void logoutTest() throws IOException {
 		
-		BaseFB bf = new BaseFB();
-		bf.Login();
 		BaseFB.driver.findElement(By.className("menuPulldown")).click();
 		BaseFB.driver.findElement(By.cssSelector(".uiLinkButtonInput")).submit();
 		testScreenShot();

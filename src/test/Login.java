@@ -6,10 +6,9 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 public class Login {
-	
-	
+
 	@BeforeTest
-	public void beforeTest() {
+	public void BeforeTest() {
 		BaseFB.driver.get("https://www.facebook.com");
 		BaseFB.driver.manage().deleteAllCookies();
 		BaseFB.driver.manage().window().maximize();
@@ -17,7 +16,7 @@ public class Login {
 	
 	@Test
 	public void EmptyLoginTest() {
-
+	
 		System.out.println("Page title is: " + BaseFB.driver.getTitle());
 		Assert.assertEquals("Welcome to Facebook - Log In, Sign Up or Learn More", BaseFB.driver.getTitle());
 

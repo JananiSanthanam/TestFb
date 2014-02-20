@@ -1,9 +1,6 @@
 package test;
 
 import java.io.IOException;
-import java.util.Iterator;
-import java.util.Set;
-
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import org.openqa.selenium.By;
@@ -15,20 +12,16 @@ import org.testng.Assert;
 @Listeners({ test.ScreenShotOnFailure.class })
 public class Home {
 	
-	@Test
 	@Test(description="load elements and check for the element")
 	public void HomeTest() throws IOException, InterruptedException {
 		WebDriver driver = DriverManager.getDriverInstance();
 		
 		BaseFB bf = new BaseFB();
 		bf.Login();
-		
-		JavascriptExecutor js = (JavascriptExecutor)BaseFB.driver;
 
 		JavascriptExecutor js = (JavascriptExecutor)driver;
 		System.out.println("i am home");
 		js.executeScript("window.scroll(0,2050)");
-		
 
 		for (int second = 0;; second++) {
 	        if (second >= 50) {
@@ -36,7 +29,6 @@ public class Home {
 	        	break;
 	        }
 	        try { 
-	            if (IsElementActive(By.xpath(".//*[@class='friendBrowserCheckboxContentGrid']/ul[3]"), BaseFB.driver)) {
 	            if (IsElementActive(By.xpath(".//*[@class='friendBrowserCheckboxContentGrid']/ul[3]"), driver)) {
 	                System.out.println("found it");
 	                Assert.assertTrue(true);
@@ -46,29 +38,10 @@ public class Home {
 	    }
 	}
 	
-	@Test
-	public void statusEmpty() {
-		BaseFB.driver.findElement(By.cssSelector(".navLink.bigPadding")).click();
-		BaseFB.driver.findElement(By.xpath(".//textarea[@*]")).sendKeys("");
-		BaseFB.driver.findElement(By.cssSelector("._42ft._42fu._11b.selected._42g-")).submit();
 	@Test(description="handle pop-up for empty status")
 	public void statusEmpty() throws InterruptedException {
 		WebDriver driver = DriverManager.getDriverInstance();
 		
-	      String parentWindowHandle = BaseFB.driver.getWindowHandle(); // save the current window handle.
-	      WebDriver popup = null;
-	      Set<String> windowIterator = BaseFB.driver.getWindowHandles();
-	      Iterator<String> iterator = windowIterator.iterator();
-	      while(iterator.hasNext()) { 
-	        String windowHandle = iterator.next(); 
-	        popup = BaseFB.driver.switchTo().window(windowHandle);
-	        if (popup.getTitle().equals("Status Is Empty")) {
-	          break;
-	        }
-	      }
-		popup.findElement(By.cssSelector("._42ft._4jy0._4jy3._4jy1.selected.layerCancel>span")).click();
-	//	browser.close(); // close the popup.
-		BaseFB.driver.switchTo().window(parentWindowHandle);
 		driver.findElement(By.cssSelector(".navLink.bigPadding")).click();
 		Thread.sleep(1000);
 		JavascriptExecutor js = (JavascriptExecutor)driver;
@@ -112,7 +85,6 @@ public class Home {
 	private static boolean IsElementActive(By xpath, WebDriver driver) {
 	    WebElement we =  driver.findElement(xpath);        
 	    return we.isEnabled();
-
 	}
 	
 

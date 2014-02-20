@@ -11,7 +11,6 @@ public class PropertyConfig {
 		private FileInputStream file = null;
 		private Properties p; 
 		
-		public PropertyConfig() {
 		public PropertyConfig(WebDriver dv) {
 			this.d = dv;
 			if(!d.getTitle().equals("Facebook")) {

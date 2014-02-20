@@ -3,12 +3,20 @@ import java.io.IOException;
 import java.util.Properties;
 import java.io.FileInputStream;
 
+import org.openqa.selenium.WebDriver;
+
 public class PropertyConfig {
+		private WebDriver d;
 		private String username, passwd;
 		private FileInputStream file = null;
 		private Properties p; 
 		
 		public PropertyConfig() {
+		public PropertyConfig(WebDriver dv) {
+			this.d = dv;
+			if(!d.getTitle().equals("Facebook")) {
+				throw new IllegalStateException("This is not Facebook page. It title is: " + d.getTitle());
+			}
 			readFile();
 		}
 		public String getUsername(){

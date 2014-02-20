@@ -10,6 +10,8 @@ public class BaseFB {
 	
 	public void Login() {
 		PropertyConfig pc = new PropertyConfig();
+		WebDriver driver = DriverManager.getDriverInstance();
+		PropertyConfig pc = new PropertyConfig(driver);
 		
 		System.out.println("Page title is: " + driver.getTitle());
 		Assert.assertEquals("Facebook", driver.getTitle());

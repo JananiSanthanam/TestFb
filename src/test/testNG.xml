@@ -8,4 +8,24 @@
    <class name="test.Logout"/>
 </classes>
 </test>
+<suite name="Suite1" thread-count="2" parallel="tests" >
+
+	<test name="Test1 - FireFox">
+		<parameter name="browser_type" value="firefox"/>
+		<classes>
+   			<class name="test.Login"/>
+ 			<class name="test.Home"/>
+   			<class name="test.Logout"/> 
+		</classes>
+	</test>
+
+	<test name="Test2 - Chrome">
+		<parameter name="browser_type" value="chrome"/>
+		<classes>
+   			<class name="test.Login"/>
+			<class name="test.Home"/> 
+   			<class name="test.Logout"/>
+		</classes>
+	</test>
+
 </suite>
